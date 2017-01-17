@@ -144,6 +144,7 @@
      <Compile Include="Assets\RFPSP\Scripts\Weapons\ShellEjection.cs" />
      <Compile Include="Assets\RFPSP\Scripts\Weapons\WeaponBehavior.cs" />
      <Compile Include="Assets\RFPSP\Scripts\Weapons\WeaponPivot.cs" />
+     <Compile Include="Assets\Shooted.cs" />
      <None Include="Assets\RFPSP\Image Effects\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\RFPSP\Image Effects\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\RFPSP\Demo\Other\Terrain Assets\Trees Ambient-Occlusion\Billboard.shader" />
