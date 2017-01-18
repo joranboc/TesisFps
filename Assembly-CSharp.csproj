@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\GreenForest\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\LataManager.cs" />
+     <Compile Include="Assets\Movimiento.cs" />
      <Compile Include="Assets\RFPSP\Demo\Other\Water\Scripts\WaterSimple.cs" />
      <Compile Include="Assets\RFPSP\Image Effects\Effects\ImageEffects\Scripts\Antialiasing.cs" />
      <Compile Include="Assets\RFPSP\Image Effects\Effects\ImageEffects\Scripts\Bloom.cs" />
@@ -148,6 +149,7 @@
      <Compile Include="Assets\RFPSP\Scripts\Weapons\WeaponBehavior.cs" />
      <Compile Include="Assets\RFPSP\Scripts\Weapons\WeaponPivot.cs" />
      <Compile Include="Assets\Shooted.cs" />
+     <Compile Include="Assets\colision.cs" />
      <None Include="Assets\RFPSP\Image Effects\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\RFPSP\Image Effects\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\RFPSP\Demo\Other\Terrain Assets\Trees Ambient-Occlusion\Billboard.shader" />

@@ -70,8 +70,15 @@ public class LataManager : MonoBehaviour {
 	}
 	public void barril(){
 		DestruyeGuiObjInstance.SetActive(true);
-		puerta2.SetActive(false);
+
 		guiaGUIText.text = "Felicitaciones puedes avanzar";
 		Invoke("DesactivarTexto",3);
+	}
+	public void diana(){
+		DestruyeGuiObjInstance.SetActive(true);
+
+		guiaGUIText.text = "Felicitaciones puedes avanzar";
+		Invoke("DesactivarTexto",3);
+		puerta2.SetActive(false);
 	}
 }
