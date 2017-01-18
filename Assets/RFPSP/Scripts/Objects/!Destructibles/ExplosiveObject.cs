@@ -30,6 +30,7 @@ public class ExplosiveObject : MonoBehaviour {
 	private AudioSource aSource;
 	private Collider hitCollider;
 	private Rigidbody hitRigidbody;
+
 	
 	void Start (){
 		WeaponEffectsComponent = Camera.main.GetComponent<CameraControl>().playerObj.GetComponent<FPSPlayer>().WeaponEffectsComponent;

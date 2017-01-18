@@ -28,9 +28,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184122}
-  m_LocalRotation: {x: 0, y: -.999387324, z: 0, w: .0350006707}
-  m_LocalPosition: {x: -3.71846008, y: 16.5289993, z: 3.01048279}
+  m_LocalRotation: {x: 0, y: -0.9993873, z: 0, w: 0.03500067}
+  m_LocalPosition: {x: -3.71846, y: 16.529, z: 3.0104828}
   m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -43,17 +44,22 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: e5e1148ccb61bb54c96a5f764d04cfd4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -72,9 +78,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184122}
   serializedVersion: 2
-  m_Mass: .25
+  m_Mass: 0.25
   m_Drag: 0
-  m_AngularDrag: .200000003
+  m_AngularDrag: 0.2
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -120,6 +126,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -130,6 +137,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -140,6 +148,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -150,6 +159,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11430612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitPoints: 100
   explosionDamage: 500
-  damageDelay: .200000003
+  damageDelay: 0.2
   blastForce: 10
   radius: 7
   blastMask:
@@ -194,8 +204,8 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: 76fb87b6177baf6489354c85166ce299, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .0199999996
-  m_Height: .0700000003
+  m_Radius: 0.02
+  m_Height: 0.07
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000

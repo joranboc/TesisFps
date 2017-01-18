@@ -413,17 +413,7 @@ public class FPSPlayer : MonoBehaviour {
 		
 		if(usePlayerThirst){
 			//create instance of GUIText to display thirst amount on hud
-			thirstGuiObjInstance = Instantiate(thirstGuiObj,Vector3.zero,transform.rotation) as GameObject;
-			//set reference for main color element of thirst GUIText
-			ThirstText = thirstGuiObjInstance.GetComponent<ThirstText>();
-			//set reference for shadow background color element of thirst GUIText
-			//this object is a child of the main thirst GUIText object, so access it as an array
-			ThirstText2 = thirstGuiObjInstance.GetComponentsInChildren<ThirstText>();
-			
-			//initialize thirst amounts on GUIText objects
-			ThirstText.thirstGui = thirstPoints;
-			ThirstText2[1].thirstGui = thirstPoints;
-			ThirstGUIText = ThirstText.GetComponent<GUIText>();	
+		
 		}
 		
 	}
@@ -1124,8 +1114,7 @@ public class FPSPlayer : MonoBehaviour {
 		thirstPoints = Mathf.Clamp(thirstPoints, 0.0f, thirstPoints);
 			
 		//set thirst hud value to thirst points remaining
-		ThirstText.thirstGui = Mathf.Round(thirstPoints);
-		ThirstText2[1].thirstGui = Mathf.Round(thirstPoints);
+	
 			
 		//change color of hud thirst element based on thirst points
 		if (thirstPoints <= 65.0f){

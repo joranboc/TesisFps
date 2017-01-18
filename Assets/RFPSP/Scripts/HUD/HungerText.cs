@@ -29,7 +29,7 @@ public class HungerText : MonoBehaviour {
 	void Update (){
 		//only update GUIText if value to be displayed has changed
 		if(hungerGui != oldHungerGui || oldWidth != Screen.width){
-			guiTextComponent.text = "Hunger : "+ hungerGui.ToString();
+			guiTextComponent.text = "Latas Restantes : "+ hungerGui.ToString();
 			guiTextComponent.pixelOffset = new Vector2 (Screen.width * horizontalOffset, Screen.height * verticalOffset);
 			guiTextComponent.fontSize = Mathf.RoundToInt(Screen.height * fontScale);
 			oldWidth = Screen.width;

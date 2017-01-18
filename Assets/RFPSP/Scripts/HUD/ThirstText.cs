@@ -26,15 +26,6 @@ public class ThirstText : MonoBehaviour {
 		oldWidth = Screen.width;
 	}
 	
-	void Update (){
-		//only update GUIText if value to be displayed has changed
-		if(thirstGui != oldThirstGui || oldWidth != Screen.width){
-			guiTextComponent.text = "Thirst : "+ thirstGui.ToString();
-			guiTextComponent.pixelOffset = new Vector2 (Screen.width * horizontalOffset, Screen.height * verticalOffset);
-			guiTextComponent.fontSize = Mathf.RoundToInt(Screen.height * fontScale);
-			oldWidth = Screen.width;
-			oldThirstGui = thirstGui;
-		}
-	}
+
 	
 }

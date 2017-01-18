@@ -44,8 +44,9 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.281685501, y: -.0850075856, z: 0}
-  m_LocalScale: {x: 1.48493183, y: 1.48493218, z: 1.48493195}
+  m_LocalPosition: {x: -0.2816855, y: -0.085007586, z: 0}
+  m_LocalScale: {x: 1.4849318, y: 1.4849322, z: 1.484932}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 400004}
   m_RootOrder: 0
@@ -55,9 +56,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
-  m_LocalRotation: {x: -.017424088, y: .573494375, z: -.0814673677, w: .814962447}
-  m_LocalPosition: {x: -79.158432, y: 2.2818327, z: 13.1716728}
-  m_LocalScale: {x: .673431516, y: .673431516, z: .673431456}
+  m_LocalRotation: {x: -0.017424088, y: 0.5734944, z: -0.08146737, w: 0.81496245}
+  m_LocalPosition: {x: -79.15843, y: 2.2818327, z: 13.171673}
+  m_LocalScale: {x: 0.6734315, y: 0.6734315, z: 0.67343146}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 400000}
   m_Father: {fileID: 0}
@@ -71,17 +73,22 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 2fdb01f6e9efeb34c9c8c302a8bb210d, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -103,8 +110,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .600000024, y: .140000001, z: .600000024}
-  m_Center: {x: .0500000007, y: .0500000007, z: .0500000007}
+  m_Size: {x: 0.6, y: 0.14, z: 0.6}
+  m_Center: {x: 0.05, y: 0.05, z: 0.05}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -145,6 +152,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -155,6 +163,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -165,6 +174,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -175,6 +185,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -187,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionDamage: 200
-  damageDelay: .200000003
+  damageDelay: 0.2
   blastForce: 15
   explosionFX: {fileID: 0}
   beepFx: {fileID: 0}
@@ -210,7 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionDamage: 200
-  damageDelay: .300000012
+  damageDelay: 0.3
   blastForce: 15
   explosionFX: {fileID: 8300000, guid: b7ac7600c7b0c174fa29d17da898fefa, type: 3}
   beepFx: {fileID: 8300000, guid: 8a7a5065d1b41d84bb7708e004ed4bc7, type: 3}
