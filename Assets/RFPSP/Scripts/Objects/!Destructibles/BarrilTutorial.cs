@@ -10,7 +10,7 @@ public class BarrilTutorial : MonoBehaviour {
 		ScriptManager = manager.GetComponent<LataManager>();
 	}
 	void OnDestroy(){
-		Debug.Log("Destruido");
+
 		ScriptManager.barril();
 	}
 }

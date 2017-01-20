@@ -5,6 +5,8 @@ public class colision : MonoBehaviour {
 	public GameObject manager;
 	LataManager ScriptManager;
 	public int puntaje = 0;
+	public GameObject puerta2;
+
 	// Use this for initialization
 	void Start () {
 		ScriptManager = manager.GetComponent<LataManager>();
@@ -17,6 +19,7 @@ public class colision : MonoBehaviour {
 	public void Aviso (){
 		puntaje ++;
 		if( puntaje == 5){
+			puerta2.SetActive(false);
 			ScriptManager.diana();
 		}
 	}
