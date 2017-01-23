@@ -192,7 +192,7 @@ public class MainMenu : MonoBehaviour {
 		
 		//menu title and background
 		GUI.Box(new Rect(buttonH - buttonSpacing, buttonV - buttonHeightAmt - buttonSpacing, (buttonWidthAmt * 2.0f) + buttonSpacing * 3.0f, (buttonHeightAmt + buttonSpacing) * 6.0f), "");
-		GUI.Box(new Rect(buttonH - buttonSpacing, buttonV - buttonHeightAmt - buttonSpacing, (buttonWidthAmt * 2.0f) + buttonSpacing * 3.0f, buttonHeightAmt), "Realistic FPS Prefab - Main Menu", titleStyle);
+		GUI.Box(new Rect(buttonH - buttonSpacing, buttonV - buttonHeightAmt - buttonSpacing, (buttonWidthAmt * 2.0f) + buttonSpacing * 3.0f, buttonHeightAmt), "Day Light Main Menu", titleStyle);
 
 //			GUI.Button(new Rect(Screen.width * 0.5f - ((buttonWidthAmt * 1.5f) * 0.5f), 0.0f + buttonSpacing, buttonWidthAmt * 1.5f, buttonHeightAmt * 0.5f), 
 //					  " Level : " + level.ToString() + " XP : " + kills.ToString() + " / " + nextLevelKills.ToString());
@@ -212,38 +212,9 @@ public class MainMenu : MonoBehaviour {
 			this.enabled = false;
 		}
 
-		if (GUI.Button(new Rect(buttonH, buttonV + ((buttonHeightAmt + buttonSpacing) * 2), buttonWidthAmt, buttonHeightAmt), "Story Mode", mapButtonStyle)){
-			if(!npcGoupsNull){	
-				PlayerPrefs.SetInt("Game Type", 0);
-				FPSPlayerComponent.RestartMap();
-				PlayButtonFx(buttonClickFx, buttonFxVol);
-				this.enabled = false;
-			}else{
-				PlayButtonFx(beepClickFx, beepFxVol);
-			}
-		}
-		
-		if (GUI.Button(new Rect(buttonH, buttonV + ((buttonHeightAmt + buttonSpacing) * 3), buttonWidthAmt, buttonHeightAmt), "Faction War", mapButtonStyle)){		
-			if(!npcGoupsNull){	
-				PlayerPrefs.SetInt("Game Type", 1);
-				FPSPlayerComponent.RestartMap();
-				PlayButtonFx(buttonClickFx, buttonFxVol);
-				this.enabled = false;
-			}else{
-				PlayButtonFx(beepClickFx, beepFxVol);
-			}
-		}
-		
-		if (GUI.Button(new Rect(buttonH, buttonV + ((buttonHeightAmt + buttonSpacing) * 4), buttonWidthAmt, buttonHeightAmt), "Wave Survival", mapButtonStyle)){		
-			if(!npcGoupsNull){	
-				PlayerPrefs.SetInt("Game Type", 2);
-				FPSPlayerComponent.RestartMap();
-				PlayButtonFx(buttonClickFx, buttonFxVol);
-				this.enabled = false;
-			}else{
-				PlayButtonFx(beepClickFx, beepFxVol);
-			}
-		}
+
+
+
 		
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		//Right Buttons
@@ -254,62 +225,12 @@ public class MainMenu : MonoBehaviour {
 			PlayButtonFx(giveAllClickFx, giveAllFxVol);
 		}
 
-		if (GUI.Button(new Rect(buttonH + buttonWidthAmt + buttonSpacing, buttonV + buttonHeightAmt + buttonSpacing, buttonWidthAmt, buttonHeightAmt), "Invulnerable", toggleButtonStyle1)){		
-			if(!FPSPlayerComponent.invulnerable){
-				FPSPlayerComponent.invulnerable = true;
-				PlayButtonFx(invulClickFx, invulFxVol);
-				toggleButtonStyle1.normal.textColor = btnActiveTextColor;
-				toggleButtonStyle1.active.textColor = btnActiveTextColor;
-				toggleButtonStyle1.hover.textColor = btnActiveTextColor;
-			}else{
-				PlayButtonFx(beepClickFx, beepFxVol);
-				FPSPlayerComponent.invulnerable = false;
-				toggleButtonStyle1.normal.textColor = Color.gray;
-				toggleButtonStyle1.active.textColor = Color.gray;
-				toggleButtonStyle1.hover.textColor = Color.gray;
-			}
-		}
-
-		if (GUI.Button(new Rect(buttonH + buttonWidthAmt + buttonSpacing, buttonV + ((buttonHeightAmt + buttonSpacing) * 2), buttonWidthAmt, buttonHeightAmt), "Hunger and Thirst", toggleButtonStyle2)){		
-			if(hungerThirstActive){
-				hungerThirstActive = false;
-				FPSPlayerComponent.usePlayerHunger = false;
-				FPSPlayerComponent.usePlayerThirst = false;
-				PlayButtonFx(beepClickFx, beepFxVol);
-				toggleButtonStyle2.normal.textColor = Color.gray;
-				toggleButtonStyle2.active.textColor = Color.gray;
-				toggleButtonStyle2.hover.textColor = Color.gray;
-			}else{
-				PlayButtonFx(buttonClickFx, buttonFxVol);
-				FPSPlayerComponent.usePlayerHunger = true;
-				FPSPlayerComponent.usePlayerThirst = true;
-				FPSPlayerComponent.UpdateHunger(-FPSPlayerComponent.maxHungerPoints);
-				FPSPlayerComponent.UpdateThirst(-FPSPlayerComponent.maxThirstPoints);
-				hungerThirstActive = true;
-				toggleButtonStyle2.normal.textColor = btnActiveTextColor;
-				toggleButtonStyle2.active.textColor = btnActiveTextColor;
-				toggleButtonStyle2.hover.textColor = btnActiveTextColor;
-			}
-		}
-
-		if (GUI.Button(new Rect(buttonH + buttonWidthAmt + buttonSpacing, buttonV + ((buttonHeightAmt + buttonSpacing) * 3), buttonWidthAmt, buttonHeightAmt), "Free Aim Zooming", toggleButtonStyle3)){		
-			FPSPlayerComponent.WeaponPivotComponent.ToggleDeadzoneZooming();
-			if(FPSPlayerComponent.WeaponPivotComponent.deadzoneZooming){
-				PlayButtonFx(buttonClickFx, buttonFxVol);
-				toggleButtonStyle3.normal.textColor = btnActiveTextColor;
-				toggleButtonStyle3.active.textColor = btnActiveTextColor;
-				toggleButtonStyle3.hover.textColor = btnActiveTextColor;
-			}else{
-				PlayButtonFx(beepClickFx, beepFxVol);
-				toggleButtonStyle3.normal.textColor = Color.gray;
-				toggleButtonStyle3.active.textColor = Color.gray;
-				toggleButtonStyle3.hover.textColor = Color.gray;
-			}
-			aSource.Play();
-		}
 
 
-		if (GUI.Button(new Rect(buttonH + buttonWidthAmt + buttonSpacing, buttonV + ((buttonHeightAmt + buttonSpacing) * 4), buttonWidthAmt, buttonHeightAmt), "Exit Game", mainButtonSyle)){		
+
+
+
+		if (GUI.Button(new Rect(buttonH + buttonWidthAmt + buttonSpacing, buttonV + ((buttonHeightAmt + buttonSpacing) * 1), buttonWidthAmt, buttonHeightAmt), "Exit Game", mainButtonSyle)){		
 			PlayerPrefs.SetInt("Game Type", 0);
 			PlayButtonFx(buttonClickFx, buttonFxVol);
 			Application.Quit();
