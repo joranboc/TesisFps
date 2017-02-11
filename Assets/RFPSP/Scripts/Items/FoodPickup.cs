@@ -32,33 +32,14 @@ public class FoodPickup : MonoBehaviour {
 	
 	public void PickUpItem(){
 		//if player is hungry, apply hungerToRemove to hungerPoints
-		if (FPSPlayerComponent.hungerPoints > 0.0f && FPSPlayerComponent.usePlayerHunger) {
-			
-			if(FPSPlayerComponent.hungerPoints - hungerToRemove > 0.0){
-				FPSPlayerComponent.UpdateHunger(-hungerToRemove);
-			}else{
-				FPSPlayerComponent.UpdateHunger(-FPSPlayerComponent.hungerPoints);	
-			}
-			
-			//restore player health by healthToRestore amount
-			if(FPSPlayerComponent.hitPoints + healthToRestore < FPSPlayerComponent.maximumHitPoints){
-				FPSPlayerComponent.HealPlayer(healthToRestore);	
-			}else{
-				FPSPlayerComponent.HealPlayer(FPSPlayerComponent.maximumHitPoints - FPSPlayerComponent.hitPoints);
-			}
-			
-			//play pickup sound
-			if(pickupSound){PlayAudioAtPos.PlayClipAt(pickupSound, myTransform.position, 0.75f);}
-			
+	
+
 			if(removeOnUse){
 				FreePooledObjects();
 				//remove this food pickup
 				Object.Destroy(gameObject);
 			}
-		}else{
-			//if player is not hungry, just play beep sound
-			if(fullSound){PlayAudioAtPos.PlayClipAt(fullSound, myTransform.position, 0.75f);}	
-		}
+	
 	}
 	
 	//return pooled objects back to object pool to prevent them from being destroyed when this object is destroyed after use

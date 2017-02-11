@@ -152,7 +152,12 @@
      <Compile Include="Assets\RFPSP\Scripts\Weapons\WeaponBehavior.cs" />
      <Compile Include="Assets\RFPSP\Scripts\Weapons\WeaponPivot.cs" />
      <Compile Include="Assets\Shooted.cs" />
+     <Compile Include="Assets\activarDialogo.cs" />
+     <Compile Include="Assets\activarDialogo2.cs" />
      <Compile Include="Assets\colision.cs" />
+     <Compile Include="Assets\entro.cs" />
+     <Compile Include="Assets\entroluz.cs" />
+     <Compile Include="Assets\nivelManager.cs" />
      <None Include="Assets\RFPSP\Image Effects\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\RFPSP\Image Effects\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\RFPSP\Demo\Other\Terrain Assets\Trees Ambient-Occlusion\Billboard.shader" />

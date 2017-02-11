@@ -5,6 +5,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class AI : MonoBehaviour {
+	public GameObject manager;
+	nivelManager ScriptManager;
 	[HideInInspector]
 	public bool spawned = false;
 	[HideInInspector]
@@ -51,7 +53,8 @@ public class AI : MonoBehaviour {
 	[Tooltip("Chance between 0 and 1 that NPC will spawn. Used to randomize NPC locations and surprise the player.")]
 	[Range(0.0f, 1.0f)]
 	public float randomSpawnChance = 1.0f;
-	
+
+
 	//NPC movement speeds
 	[Tooltip("Running speed of the NPC.")]
 	public float runSpeed = 6.0f;
@@ -239,11 +242,12 @@ public class AI : MonoBehaviour {
 	
 	[HideInInspector]
 	public RaycastHit attackHit;
-	
+
 	//public int navTest;
 
 	void Start(){
-	
+		
+
 		NPCMgrObj = GameObject.Find("NPC Manager");
 		NPCRegistryComponent = NPCMgrObj.GetComponent<NPCRegistry>();
 		NPCRegistryComponent.Npcs.Add(myTransform.gameObject.GetComponent<AI>());//register this active NPC with the NPCRegistry
@@ -1133,39 +1137,9 @@ public class AI : MonoBehaviour {
 	//Interact with NPC when pressing use key over them 
 	public void CommandNPC () {
 		if(factionNum == 1 && followOnUse && commandedTime + 0.5f < Time.time){
-			orderedMove = false;
-			cancelRotate = false;
-			commandedTime = Time.time;
-			if(attackFinished && !turning){
-				StopCoroutine("RotateTowards");
-				StartCoroutine(RotateTowards(playerTransform.position, 10.0f, 2.0f, false));
-			}
-			if(!followPlayer){
-				if((followFx1 || followFx2) && ((jokeFx && jokePlaying + jokeFx.length < Time.time) || !jokeFx)){
-					if(Random.value > 0.5f){
-						vocalFx.clip = followFx1;
-					}else{
-						vocalFx.clip = followFx2;
-					}
-					vocalFx.pitch = Random.Range(0.94f, 1f);
-					vocalFx.spatialBlend = 1.0f;
-					vocalFx.PlayOneShot(vocalFx.clip);
-				}
-				followPlayer = true;
-			}else{
-				if((stayFx1 || stayFx2) && ((jokeFx && jokePlaying + jokeFx.length < Time.time) || !jokeFx)){
-					if(Random.value > 0.5f){
-						vocalFx.clip = stayFx1;
-					}else{
-						vocalFx.clip = stayFx2;
-					}
-					vocalFx.pitch = Random.Range(0.94f, 1f);
-					vocalFx.spatialBlend = 1.0f;
-					vocalFx.PlayOneShot(vocalFx.clip);
-				}
-				startPosition = myTransform.position;
-				followPlayer = false;
-			}
+			ScriptManager = manager.GetComponent<nivelManager>();
+			ScriptManager.Robot ();
+
 		}
 		if(jokeFx && factionNum == 1 && followOnUse){
 			if(jokeCount == 0){
