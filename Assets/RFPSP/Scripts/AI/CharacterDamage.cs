@@ -53,6 +53,12 @@ public class CharacterDamage : MonoBehaviour {
 	private bool explosionCheck;
 	private LayerMask raymask = 1 << 13;
 
+	private string name;
+	public GameObject manager;
+	nivelManager ScriptManager;
+	void Start(){
+		ScriptManager = manager.GetComponent<nivelManager>();
+	}
 	void OnEnable (){
 		myTransform = transform;
 		RemoveBodyComponent = GetComponent<RemoveBody>();
@@ -64,7 +70,9 @@ public class CharacterDamage : MonoBehaviour {
 			AIComponent = myTransform.GetComponent<AI>();
 		}
 		initialHitPoints = hitPoints;
-		bodies = GetComponentsInChildren<Rigidbody>();
+		bodies = GetComponentsInChildren<Rigidbody>(); 
+		name = this.transform.name;
+
 	}
 	
 	void Update () {
@@ -127,6 +135,7 @@ public class CharacterDamage : MonoBehaviour {
 	public void ApplyDamage ( float damage, Vector3 attackDir, Vector3 attackerPos, Transform attacker, bool isPlayer, bool isExplosion, Rigidbody hitBody = null, float bodyForce = 0f ){
 
 		if (hitPoints <= 0.0f){
+			
 			return;
 		}
 
@@ -179,7 +188,7 @@ public class CharacterDamage : MonoBehaviour {
 		//Kill NPC
 		if (hitPoints <= 0.0f){
 			AIComponent.vocalFx.Stop();
-				
+			muerto ();	
 			if(sloMoDeathChance >= Random.value && isPlayer){
 				AIComponent.PlayerWeaponsComponent.FPSPlayerComponent.StartCoroutine(AIComponent.PlayerWeaponsComponent.FPSPlayerComponent.ActivateBulletTime(sloMoDeathTime));
 			}
@@ -328,9 +337,14 @@ public class CharacterDamage : MonoBehaviour {
 			}
 			
 		}
+
+
+
+
+
 	
 	}
-	
+
 	static void CopyTransformsRecurse ( Transform src , Transform dst ){
 		dst.position = src.position;
 		dst.rotation = src.rotation;
@@ -342,4 +356,18 @@ public class CharacterDamage : MonoBehaviour {
 				CopyTransformsRecurse(curSrc, child);
 		}
 	}
+
+	public void muerto(){
+		Debug.Log("holii");
+		if (name == "ZombieNPCColliders") {
+			ScriptManager.Zombie();
+		}else if (name == "SoldierBadNPCColliders") {
+			ScriptManager.Soldier();
+		}else if (name == "RobotNPC") {
+			ScriptManager.Alien();
+		}
+	}
+
+
+
 }
