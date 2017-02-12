@@ -151,7 +151,7 @@ Material:
       second: {r: 0.60185987, g: 0.6579465, b: 0.6764706, a: 1}
     - first:
         name: _WorldLightDir
-      second: {r: 0.013992459, g: -0.17359087, b: -0.98471904, a: 0}
+      second: {r: 0.013992369, g: -0.17359081, b: -0.9847186, a: 0}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6
