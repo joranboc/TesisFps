@@ -57,7 +57,9 @@ public class CharacterDamage : MonoBehaviour {
 	public GameObject manager;
 	nivelManager ScriptManager;
 	void Start(){
-		ScriptManager = manager.GetComponent<nivelManager>();
+		if(manager != null){
+			ScriptManager = manager.GetComponent<nivelManager>();
+		}
 	}
 	void OnEnable (){
 		myTransform = transform;
@@ -358,13 +360,14 @@ public class CharacterDamage : MonoBehaviour {
 	}
 
 	public void muerto(){
-		Debug.Log("holii");
+		if(ScriptManager != null){
 		if (name == "ZombieNPCColliders") {
 			ScriptManager.Zombie();
 		}else if (name == "SoldierBadNPCColliders") {
 			ScriptManager.Soldier();
 		}else if (name == "RobotNPC") {
 			ScriptManager.Alien();
+		}
 		}
 	}
 

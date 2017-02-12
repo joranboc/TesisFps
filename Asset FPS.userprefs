@@ -1,19 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\RFPSP\Scripts\HUD\MainMenu.cs">
-    <Files>
-      <File FileName="Assets\Shooted.cs" Line="1" Column="1" />
-      <File FileName="Assets\LataManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\RFPSP\Scripts\Objects\!Destructibles\BarrilTutorial.cs" Line="1" Column="1" />
-      <File FileName="Assets\CuidadoBombas.cs" Line="1" Column="1" />
-      <File FileName="Assets\FinalNivel.cs" Line="1" Column="1" />
-      <File FileName="Assets\RFPSP\Scripts\AI\MonsterItemTrap.cs" Line="1" Column="1" />
-      <File FileName="Assets\RFPSP\Scripts\AI\MonsterTrigger.cs" Line="1" Column="1" />
-      <File FileName="Assets\RFPSP\Scripts\AI\AI.cs" Line="1" Column="1" />
-      <File FileName="Assets\RFPSP\Scripts\Effects\LevelLoadFade.cs" Line="78" Column="47" />
-      <File FileName="Assets\RFPSP\Scripts\HUD\MainMenu.cs" Line="69" Column="18" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

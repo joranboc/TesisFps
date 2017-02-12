@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class FinalNivel : MonoBehaviour {
 
 	// Use this for initialization
 	void OnTriggerEnter(Collider other){
 		if(other.CompareTag("Player")){
-			Debug.Log("Felicidades terminaste el tutorial");
-		
+			
+			SceneManager.LoadScene(1);
 		}
 	}
 }
